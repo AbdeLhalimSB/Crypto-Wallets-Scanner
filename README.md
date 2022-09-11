@@ -12,7 +12,8 @@ This tool can scan list of wallets addresses on 8 Crypto Networks with one click
 ## Usage
 
 ```javascript
-Just Download & run when you click on start the tool look like cracked but it not :)
+Download the Portable executable file of Stable Version from releases
+When you click on start the tool look like cracked but it not :)
 ```
 
 
