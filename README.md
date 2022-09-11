@@ -13,4 +13,17 @@ This tool can scan list of wallets addresses on 8 Crypto Networks with one click
 
 ```javascript
 Just Download & run when you click on start the tool look like cracked but it not :)
+```
 
+
+
+## Crypto Networks Supported
+
+- Binance Smart Chain
+- Ethereum
+- Polygon
+- Fantom
+- Avalanche
+- MoonRiver
+- MoonBeam
+- Cronos
