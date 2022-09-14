@@ -1,46 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HtmlAgilityPack;
 using System.IO;
-using System.Globalization;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Net;
 
 namespace Crypto_Wallets_Scanner
 {
     class Wallets_Scanner
     {
-        string wallet_address;
 
         public Wallets_Scanner()
         {
+            
         }
-
-        public Wallets_Scanner(string wallet_address)
+        public string GetWalletBallance(string wallet,string api,string blockch,string networklink)
         {
-            this.wallet_address = wallet_address;
-        }
-        public string GetWalletBallance(string wallet,string blockchaine,string blockch)
-        {
-            string result = "";
-            HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
-            HtmlAgilityPack.HtmlDocument doc = web.Load(blockchaine + wallet);
-            System.Threading.Thread.Sleep(2000);
-            var bnb = doc.GetElementbyId("availableBalanceDropdown");
-            //string tokens = bnb.InnerText.Substring('\n');
-            if (bnb != null)
+            string request = "https://"+networklink+"/api?module=account&action=balance&address="+wallet+"&apikey="+api;
+            var req = (HttpWebRequest)WebRequest.Create(request);
+            StreamReader responseReader = new StreamReader(req.GetResponse().GetResponseStream());
+            var responseData = responseReader.ReadToEnd();
+            try
             {
-                string balance = bnb.InnerText.TrimEnd('\n') + " Tokens";
-                result = blockch + " Network , Wallet : " + wallet + " | Balance : " + balance + "\n_____________________________________________\n";
-                return result;
+                string result = responseData.Substring(responseData.IndexOf("result") + 9);
+                result = result.Trim('}');
+                result = result.Trim('"');
+                double wei = Convert.ToDouble(result) / Math.Pow(10, 18);
+                if (wei.ToString().Contains("E"))
+                {
+                    return "";
+                }
+                else
+                {
+                    result = "\nwallet : " + wallet + " | " + wei + " " + blockch + "\n__________________________________________\n";
+                    return result;
+                }
             }
-            else
+            catch
             {
-                return result;
+                return "";
             }
         }
     }

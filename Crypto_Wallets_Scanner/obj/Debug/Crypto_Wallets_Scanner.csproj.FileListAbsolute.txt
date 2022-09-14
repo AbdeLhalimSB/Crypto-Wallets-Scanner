@@ -12,3 +12,13 @@ C:\Users\sahba\source\repos\Crypto_Wallets_Scanner\Crypto_Wallets_Scanner\obj\De
 C:\Users\sahba\source\repos\Crypto_Wallets_Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.exe
 C:\Users\sahba\source\repos\Crypto_Wallets_Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.pdb
 C:\Users\sahba\source\repos\Crypto_Wallets_Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.AssemblyReference.cache
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.AssemblyReference.cache
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.Main.resources
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.GenerateResource.cache
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.exe
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.pdb
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\Crypto_Wallets_Scanner.exe.config
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\Crypto_Wallets_Scanner.exe
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\Crypto_Wallets_Scanner.pdb
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.Properties.Resources.resources
+C:\Users\sahba\OneDrive\Desktop\Working_Onit\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.CoreCompileInputs.cache
