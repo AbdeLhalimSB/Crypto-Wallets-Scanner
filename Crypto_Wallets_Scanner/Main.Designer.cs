@@ -29,6 +29,7 @@ namespace Crypto_Wallets_Scanner
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.wallets_txt = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -154,9 +155,9 @@ namespace Crypto_Wallets_Scanner
             this.Controls.Add(this.result_txt);
             this.Controls.Add(this.wallets_txt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.ShowIcon = false;
             this.Text = "Crypto Wallets Scanner";
             this.ResumeLayout(false);
             this.PerformLayout();
