@@ -6,7 +6,7 @@ This tool can scan list of wallets addresses on 8 Crypto Networks with one click
 
 ## Screenshots
 
-![App Screenshot](https://github.com/AbdeLhalimSB/Proxy-Checker/blob/main/Proxy-Checker/img/Screenshot.png)
+![App Screenshot](https://github.com/AbdeLhalimSB/Crypto-Wallets-Scanner/blob/main/Crypto_Wallets_Scanner/Resources/Capture.PNG)
 
 
 ## Usage
