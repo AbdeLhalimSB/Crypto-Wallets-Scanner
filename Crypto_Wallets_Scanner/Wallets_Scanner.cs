@@ -24,13 +24,13 @@ namespace Crypto_Wallets_Scanner
         {
             this.wallet_address = wallet_address;
         }
-        public string GetWalletBallance(string wallet,string blockchaine,string blockch)
+        public string GetWalletBallance(string wallet,string blockchaine,string blockch,string id)
         {
             string result = "";
             HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
             HtmlAgilityPack.HtmlDocument doc = web.Load(blockchaine + wallet);
             System.Threading.Thread.Sleep(2000);
-            var bnb = doc.GetElementbyId("availableBalanceDropdown");
+            var bnb = doc.GetElementbyId(id);
             //string tokens = bnb.InnerText.Substring('\n');
             if (bnb != null)
             {

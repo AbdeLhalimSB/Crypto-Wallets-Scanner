@@ -24,7 +24,7 @@ namespace Crypto_Wallets_Scanner
         }
 
         List<string> wallets = new List<string>();
-
+        string result = string.Empty;
         private void button1_MouseHover(object sender, EventArgs e)
         {
             start.ForeColor = Color.White;
@@ -58,7 +58,7 @@ namespace Crypto_Wallets_Scanner
                 "https://polygonscan.com/address/",
                 "https://ftmscan.com/address/",
                 "https://snowtrace.io/address/",
-                "https://moonriver.moonscan.io/",
+                "https://moonriver.moonscan.io/address/",
                 "https://moonscan.io/address/",
                 "https://cronoscan.com/address/"
             };
@@ -86,37 +86,43 @@ namespace Crypto_Wallets_Scanner
                     if (b == 0)
                     {
                         blockch = "BNB";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "dropdownMenuBalance");
                     }
                     else if (b == 1)
                     {
                         blockch = "Ether";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "dropdownMenuBalance");
                     }
                     else if (b == 2)
                     {
                         blockch = "Polygon";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
                     else if (b == 3)
                     {
                         blockch = "Fantom";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
                     else if (b == 4)
                     {
                         blockch = "Avalanche";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
                     else if (b == 5)
                     {
                         blockch = "MoonRiver";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
                     else if (b == 6)
                     {
                         blockch = "MoonBeam";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
                     else
                     {
                         blockch = "Cronos";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
-
-                    string result = ws.GetWalletBallance(wallet, blockchains[b], blockch);
 
                     // Report progress and result to the UI thread
                     worker.ReportProgress((progress * 100) / totalWallets, result);
