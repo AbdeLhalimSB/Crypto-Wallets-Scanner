@@ -1,7 +1,7 @@
 
 # Crypto Wallets Scanner
 
-This tool can scan list of wallets addresses on 8 Crypto Networks with one click
+This tool can scan list of wallets addresses on 9 Crypto Networks with one click
 
 
 ## Screenshots
@@ -28,6 +28,7 @@ When you click on start the tool look like cracked but it not :)
 - MoonRiver
 - MoonBeam
 - Cronos
+- Bitcoin
 
 
 ## ⚠️Disclaimer
