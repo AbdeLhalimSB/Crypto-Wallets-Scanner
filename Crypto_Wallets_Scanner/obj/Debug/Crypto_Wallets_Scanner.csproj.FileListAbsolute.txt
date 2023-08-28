@@ -27,3 +27,17 @@ C:\Users\sahba\OneDrive\Desktop\Work\Dev\Crypto-Wallets-Scanner\Crypto_Wallets_S
 C:\Users\sahba\OneDrive\Desktop\Work\Dev\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.Properties.Resources.resources
 C:\Users\sahba\OneDrive\Desktop\Work\Dev\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.CoreCompileInputs.cache
 C:\Users\sahba\OneDrive\Desktop\Work\Dev\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.CopyComplete
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\Crypto_Wallets_Scanner.exe.config
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\Crypto_Wallets_Scanner.exe
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\Crypto_Wallets_Scanner.pdb
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\HtmlAgilityPack.dll
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\bin\Debug\HtmlAgilityPack.xml
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.Main.resources
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.Properties.Resources.resources
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.csproj.CopyComplete
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.exe
+C:\Users\PC\Desktop\Wroking_on_it\Crypto-Wallets-Scanner\Crypto_Wallets_Scanner\obj\Debug\Crypto_Wallets_Scanner.pdb

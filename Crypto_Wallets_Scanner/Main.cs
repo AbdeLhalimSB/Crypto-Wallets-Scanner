@@ -60,7 +60,8 @@ namespace Crypto_Wallets_Scanner
                 "https://snowtrace.io/address/",
                 "https://moonriver.moonscan.io/address/",
                 "https://moonscan.io/address/",
-                "https://cronoscan.com/address/"
+                "https://cronoscan.com/address/",
+                "https://blockchair.com/bitcoin/address/"
             };
 
             Wallets_Scanner ws = new Wallets_Scanner();
@@ -118,10 +119,15 @@ namespace Crypto_Wallets_Scanner
                         blockch = "MoonBeam";
                         result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
-                    else
+                    else if(b == 7)
                     {
                         blockch = "Cronos";
                         result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
+                    }
+                    else
+                    {
+                        blockch = "BTC";
+                        result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "account-hash__balance__values");
                     }
 
                     // Report progress and result to the UI thread

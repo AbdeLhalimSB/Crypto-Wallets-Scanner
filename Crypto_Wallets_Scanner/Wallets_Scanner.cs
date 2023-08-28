@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net;
+using System.Windows;
 
 namespace Crypto_Wallets_Scanner
 {
@@ -30,18 +31,38 @@ namespace Crypto_Wallets_Scanner
             HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
             HtmlAgilityPack.HtmlDocument doc = web.Load(blockchaine + wallet);
             System.Threading.Thread.Sleep(2000);
-            var bnb = doc.GetElementbyId(id);
-            //string tokens = bnb.InnerText.Substring('\n');
-            if (bnb != null)
+            if (blockchaine.Contains("bitcoin"))
             {
-                string balance = bnb.InnerText.TrimEnd('\n') + " Tokens";
-                result = blockch + " Network , Wallet : " + wallet + " | Balance : " + balance + "\n_____________________________________________\n";
+                var bnb = doc.DocumentNode.SelectSingleNode("//span[contains(@class, '" + id + "')]");
+
+                if (bnb != null)
+                {
+                    string balance = bnb.InnerText.Trim();
+                    result = blockch + " Network, Wallet: " + wallet + " | Balance: " + balance.Replace(" ","").Replace("\n","").Replace("{{Math.abs(change)}}%","") + " \n_____________________________________________\n";
+                }
+                else
+                {
+                    result = "Element with class '" + id + "' not found.\n";
+                }
                 return result;
             }
+
             else
             {
-                return result;
+                var bnb = doc.GetElementbyId(id);
+                //string tokens = bnb.InnerText.Substring('\n');
+                if (bnb != null)
+                {
+                    string balance = bnb.InnerText.TrimEnd('\n') + " Tokens";
+                    result = blockch + " Network , Wallet : " + wallet + " | Balance : " + balance + "\n_____________________________________________\n";
+                    return result;
+                }
+                else
+                {
+                    return result;
+                }
             }
+            
         }
     }
 }
