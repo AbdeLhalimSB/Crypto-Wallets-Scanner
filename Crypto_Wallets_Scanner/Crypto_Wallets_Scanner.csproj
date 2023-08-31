@@ -98,11 +98,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ethereum.ico" />
+    <Content Include="images\Screenshot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

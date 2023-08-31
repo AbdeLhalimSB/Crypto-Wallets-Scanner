@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Crypto_Wallets_Scanner
@@ -22,6 +23,8 @@ namespace Crypto_Wallets_Scanner
             worker.ProgressChanged += Worker_ProgressChanged;
             worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
         }
+        private int selectedThreadCount = 1; // Default value
+
 
         List<string> wallets = new List<string>();
         string result = string.Empty;
@@ -78,8 +81,14 @@ namespace Crypto_Wallets_Scanner
 
             int totalWallets = wallets.Count * blockchains.Count;
             int progress = 0;
+            UpdateProgressBar(0);
 
-            foreach (string wallet in wallets)
+            ParallelOptions parallelOptions = new ParallelOptions
+            {
+                MaxDegreeOfParallelism = selectedThreadCount // Set the selected thread count
+            };
+
+            Parallel.ForEach(wallets, parallelOptions, wallet =>
             {
                 for (int b = 0; b < blockchains.Count; b++)
                 {
@@ -119,7 +128,7 @@ namespace Crypto_Wallets_Scanner
                         blockch = "MoonBeam";
                         result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
                     }
-                    else if(b == 7)
+                    else if (b == 7)
                     {
                         blockch = "Cronos";
                         result = ws.GetWalletBallance(wallet, blockchains[b], blockch, "availableBalanceDropdown");
@@ -132,9 +141,22 @@ namespace Crypto_Wallets_Scanner
 
                     // Report progress and result to the UI thread
                     worker.ReportProgress((progress * 100) / totalWallets, result);
-
+                    UpdateProgressBar((progress * 100) / totalWallets);
                     progress++;
                 }
+            });
+        }
+
+        private void UpdateProgressBar(int value)
+        {
+            // Make sure you invoke the UI update on the main thread
+            if (progressBar.InvokeRequired)
+            {
+                progressBar.Invoke(new Action<int>(UpdateProgressBar), value);
+            }
+            else
+            {
+                progressBar.Value = value;
             }
         }
 
@@ -157,6 +179,12 @@ namespace Crypto_Wallets_Scanner
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Handle key press event if needed
+        }
+
+        private void threads_ValueChanged(object sender, EventArgs e)
+        {
+            selectedThreadCount = (int)threads_tx.Value;
+
         }
     }
 }

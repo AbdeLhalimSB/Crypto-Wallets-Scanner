@@ -38,6 +38,10 @@ namespace Crypto_Wallets_Scanner
             this.result_txt = new System.Windows.Forms.RichTextBox();
             this.start = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.threads_tx = new System.Windows.Forms.NumericUpDown();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            ((System.ComponentModel.ISupportInitialize)(this.threads_tx)).BeginInit();
             this.SuspendLayout();
             // 
             // wallets_txt
@@ -46,7 +50,7 @@ namespace Crypto_Wallets_Scanner
             this.wallets_txt.ForeColor = System.Drawing.Color.White;
             this.wallets_txt.Location = new System.Drawing.Point(56, 54);
             this.wallets_txt.Name = "wallets_txt";
-            this.wallets_txt.Size = new System.Drawing.Size(294, 421);
+            this.wallets_txt.Size = new System.Drawing.Size(294, 379);
             this.wallets_txt.TabIndex = 0;
             this.wallets_txt.Text = "";
             this.wallets_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_KeyPress);
@@ -81,7 +85,7 @@ namespace Crypto_Wallets_Scanner
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(22)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(59, 517);
+            this.label3.Location = new System.Drawing.Point(59, 461);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(196, 26);
             this.label3.TabIndex = 5;
@@ -93,7 +97,7 @@ namespace Crypto_Wallets_Scanner
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(299, 517);
+            this.label4.Location = new System.Drawing.Point(299, 461);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 26);
             this.label4.TabIndex = 6;
@@ -139,13 +143,53 @@ namespace Crypto_Wallets_Scanner
             this.panel1.Size = new System.Drawing.Size(2, 517);
             this.panel1.TabIndex = 7;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(22)))), ((int)(((byte)(70)))));
+            this.label5.Location = new System.Drawing.Point(59, 515);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 26);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Threads :";
+            // 
+            // threads_tx
+            // 
+            this.threads_tx.Location = new System.Drawing.Point(157, 521);
+            this.threads_tx.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.threads_tx.Name = "threads_tx";
+            this.threads_tx.Size = new System.Drawing.Size(64, 20);
+            this.threads_tx.TabIndex = 9;
+            this.threads_tx.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.threads_tx.ValueChanged += new System.EventHandler(this.threads_ValueChanged);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(0, 585);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(896, 5);
+            this.progressBar.TabIndex = 10;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(896, 582);
+            this.ClientSize = new System.Drawing.Size(896, 590);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.threads_tx);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,6 +203,7 @@ namespace Crypto_Wallets_Scanner
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Crypto Wallets Scanner";
+            ((System.ComponentModel.ISupportInitialize)(this.threads_tx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +219,9 @@ namespace Crypto_Wallets_Scanner
         private System.Windows.Forms.RichTextBox result_txt;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown threads_tx;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
