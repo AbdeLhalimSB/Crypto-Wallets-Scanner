@@ -13,7 +13,7 @@ This tool can scan list of wallets addresses on 9 Crypto Networks with one click
 
 ```javascript
 Download the Portable executable file of Stable Version from releases
-When you click on start the tool look like cracked but it not :)
+When you click on start you should see results :)
 ```
 
 
