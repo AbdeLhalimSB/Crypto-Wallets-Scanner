@@ -36,6 +36,3 @@ When you click on start you should see results :)
 This code is intended for educational and testing purposes only. Any use for unauthorized or unethical activities is not endorsed. The author is not responsible for any misuse of the code.
 
 
-## Donations
-💸My wallet : 0x8f967B2954dE5358D8883AA5802CF0F8F0137b2b
-
